@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <nav className="flex justify-between pl-50 pr-50">
+    <nav className="flex justify-between pl-50 pr-50 pb-5">
       <div className="flex gap-5 pt-2.5 ">
         <img
           className="w-[100px] h-8 pt-2"
@@ -28,17 +28,18 @@ const Navbar = () => {
           }}
           className="flex"
         >
-          <h2 className="hover:cursor-pointer hover:underline">All Microsoft</h2>
-          {/* {show ? (
-            <div className="flex pt-100 gap-10">
+          <h2 className="hover:cursor-pointer hover:underline  ">All Microsoft</h2>
+          {show ? (
+            <div className="flex pt-10 gap-10 absolute right-50 ">
               <h1>Software</h1>
               <h1>PCs7Devices</h1>
               <h1>Entertainment</h1>
               <h1>Business</h1>
               <h1>Developer & IT</h1>
               <h1>Other</h1>
+              
             </div>
-          ) : null} */}
+          ) : null}
 
           <img
             className="pt-1 pl-1 h-5 w-5 bg-white"
