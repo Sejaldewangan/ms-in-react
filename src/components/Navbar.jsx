@@ -3,14 +3,14 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <nav className="flex justify-between pl-50 pr-50 pb-5">
+    <nav className="flex justify-between pl-[5vw] pr-[5vw] pb-5">
       <div className="flex gap-5 pt-2.5 ">
         <img
           className="w-[100px] h-8 pt-2"
           src="/src/assets/RE1Mu3b (1).png"
           alt=""
         />
-        <div className="flex pt-2.5 gap-5">
+        <div className="flex pt-2.5 gap-5 text-sm">
           <h1 className="hover:cursor-pointer hover:underline ">Microsoft365</h1>
           <h1 className="hover:cursor-pointer hover:underline">Teams</h1>
           <h1 className="hover:cursor-pointer hover:underline">Copilot</h1>
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className=" flex gap-4 pt-5">
+      <div className=" flex gap-4 pt-5 text-sm">
         <div
           onClick={() => {
             setShow(!show), console.log("happy");

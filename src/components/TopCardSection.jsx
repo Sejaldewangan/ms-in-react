@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = [
   {
-    id: true,
+    id: 1,
     img: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-M365-Icons-Teams?wid=380&hei=213&fit=crop",
     head: "Achive The Extaordinary",
     paragraph:
@@ -51,11 +51,17 @@ const TopCardSection = () => {
             <h className="underline">Expolre Surface Devices</h>
           </div>
         </div>
-        <div>
-          {Cards.filter((items) => items.id).map((items) => {
-            <Cards head={items.head} />
-          })}
-          <h1 className="">{ head  }</h1>
+        <div className="pt-10">
+         {Cards.filter((items) => items.id).map((items) => {
+  return <div className="w-[20vw] h-[40vh] flex flex-col gap-3">
+<img key={items.id} src={items.img} alt="" />
+    <h1 key={items.id} className="text-2xl font-semibold ">{items.head}</h1>
+    <p key={items.id}>{items.paragraph}</p>
+    <button key={items.id}>{items.button}</button>
+  </div>
+})}
+
+          
         </div>
       </section>
     </>
