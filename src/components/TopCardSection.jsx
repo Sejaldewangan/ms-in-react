@@ -1,5 +1,4 @@
 import React from "react";
-
 const Cards = [
   {
     id: 1,
@@ -10,26 +9,25 @@ const Cards = [
     button: "Shop Microsoft 365",
   },
   {
-     id:2,
-    img:"https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Copilot-Native-App-ROW?wid=297&hei=167&fit=crop",
-    head:"Copilot is your AI companion",
-    paragraph:"Always by your side, ready to support you whenever and wherever you need it.",
-    button:"Download the Copilot app"
+    id: 2,
+    img: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Copilot-Native-App-ROW?wid=297&hei=167&fit=crop",
+    head: "Copilot is your AI companion",
+    paragraph:
+      "Always by your side, ready to support you whenever and wherever you need it.",
+    button: "Download the Copilot app",
   },
-   {
+  {
     id: 3,
     img: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S-Evergreen?wid=297&hei=167&fit=crop",
     head: "Xbox Series S",
-    paragraph:
-      "Next-gen performance in the smallest Xbox ever.",
+    paragraph: "Next-gen performance in the smallest Xbox ever.",
     button: "Shop Xbox Series S",
   },
-   {
+  {
     id: 4,
     img: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSX-CP-Xbox-Series-X?wid=297&hei=167&fit=crop",
     head: "Xbox Series X",
-    paragraph:
-      "The fastest, most powerful Xbox ever.",
+    paragraph: "The fastest, most powerful Xbox ever.",
     button: "Shop Xbox Series X",
   },
 ];
@@ -67,19 +65,25 @@ const TopCardSection = () => {
             <h className="underline">Expolre Surface Devices</h>
           </div>
         </div>
-        <div className="pt-10 flex gap-[3vw] justify-center">
-         {Cards.filter((items) => items.id).map((items) => {
-  return <div className="w-[20vw] h-[40vh] flex flex-col gap-3 ">
-<img key={items.id} src={items.img} alt="" />
-   <div className="p-5  flex flex-col gap-3 relative ">
-     <h1 key={items.id} className="text-2xl font-semibold ">{items.head}</h1>
-    <p key={items.id}>{items.paragraph}</p>
-    <button className="p-2  text-white font-semibold bg-[#005CA5]"key={items.id}>{items.button}</button>
-   </div>
-  </div>
-})}
-
-          
+        <div className="pt-10 flex gap-[3vw]  justify-center">
+          {Cards.filter((items) => items.id).map((items) => {
+            return (
+              <div className="w-[20vw] h-[40vh] flex flex-col gap-3 ">
+                <img key={items.id} src={items.img} alt="" />
+                <div className="p-5  flex flex-col gap-3  ">
+                  <h1 key={items.id} className="text-2xl font-semibold ">
+                    {items.head}
+                  </h1>
+                  <p key={items.id}>{items.paragraph}</p>
+                  <div className="flex items-end">
+                    <button className=" bg-sky-700 text-white p-2 " key={items.id}>
+                      {items.button}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>
