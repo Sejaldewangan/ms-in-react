@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import MySwiper from './components/Swiper'
 import TopCardSection from './components/TopCardSection'
+import BottomCardSection from './components/BottomCardSection'
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar />
       <MySwiper/>
 <TopCardSection />
+<BottomCardSection />
     </div>
   )
 }
