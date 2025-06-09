@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import MySwiper from './components/Swiper'
 import TopCardSection from './components/TopCardSection'
 import BottomCardSection from './components/BottomCardSection'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <MySwiper/>
 <TopCardSection />
 <BottomCardSection />
+<Footer />
     </div>
   )
 }
